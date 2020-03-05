@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/bootstrap.min.css">
+    <script src="assets/jquery-3.2.1.min.js"></script>
+    <script src="assets/popper.min.js"></script>
+    <script src="assets/bootstrap.min.js"></script>
+    <title>navbar</title>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <a href="#" class="navbar-brand">Logo</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navigation">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a href="home.html" class="nav-link">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link">Blog </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <main id="page">
+
+        </main>
+    </div>
+</body>
+
+<script>
+    $(document).ready(function() {
+        $('.nav-link').click(function() {
+            // close page loading
+            event.preventDefault();
+            // show clickable section
+            $('#page').html('');
+            var clickable_link = $(this).attr('href');
+            // 1st remove nav-item class
+            $('.nav-item').removeClass('active');
+            // 2nd addclass which you want
+            $(this).parent().addClass('active');
+            // start ajax
+            $.ajax({
+                // page blog show url id
+                url: clickable_link,
+                method: 'get'
+            }).done(
+                function(display) {
+                    $('#page').html(display);
+                }
+            ).fail(
+                function() {
+                    console.log("error");
+
+                }
+            );
+        });
+    });
+</script>
+
+</html>

@@ -22,7 +22,14 @@
         <hr>
         <a href="switchcasehtml.php">switchcasehtml</a><br>
         <hr>
-
+        <a href="forloop.php">forloop</a><br>
+        <hr>
+        <a href="forloophtml.php">forloophtml</a><br>
+        <hr>
+        <a href="forloophtml2.php">forloophtml2</a><br>
+        <hr>
+        <a href="forloop_html_bootstrape.php">forloophtmlBootstrape</a><br>
+        <hr>
     </div>
 </body>
 
