@@ -30,6 +30,10 @@
         <hr>
         <a href="forloop_html_bootstrape.php">forloophtmlBootstrape</a><br>
         <hr>
+        <a href="stringPrac.php">StringPracticle</a><br>
+        <hr>
+        <a href="array.php">Array</a><br>
+        <hr>
     </div>
 </body>
 
